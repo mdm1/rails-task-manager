@@ -1,12 +1,24 @@
-<h1>My tasks</h1>
+<div class="container">
+  <h1>My tasks</h1>
 
-<form action="get">
-<% @tasks.each do |task| %>
-    <p>
-    <%= check_box_tag 'completed', 'done', task.completed %>
-    <%=link_to "#{task.title}", displayit_path(task) %>
-  <% end %>
-    </p>
-</form>
+  <form action="get">
+    <% @tasks.each do |task| %>
+      <p>
+        <div class="form-group">
+        <%= check_box_tag 'completed', 'done', task.completed %>
+        <%=link_to "#{task.title}", task_path(task) %>
+        <%=link_to destroy_path(task),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do %>
+                <i class = "fa fa-trash ml-2" aria-hidden="true"></i>
+                <% end %>
+        </div>
+      </p>
+    <% end %>
+  </form>
+
+</div>
+
+<%= link_to 'Create a task', newit_path %>
 
 

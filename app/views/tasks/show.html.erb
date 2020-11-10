@@ -1,5 +1,8 @@
 <div class="container">
-  <h1><%= @task.title %></h1>
+  <div class="container-title">
+    <h1><%= @task.title %></h1>
+    <%= link_to 'Edit this task', editit_path(@task) %>
+  </div>
 
   <div class="container-details">
     <p> <%= @task.details %></p>

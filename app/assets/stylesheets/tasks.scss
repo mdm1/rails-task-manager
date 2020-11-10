@@ -1,3 +1,41 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin-bottom: 2px;
+}
+
+a {
+  font-family: 'Yanone Kaffeesatz';
+  text-decoration: none;
+  color: #38618C;
+}
+
+a:hover {
+  color: #35A7FF;
+}
+
+p {
+   font-family: 'Yanone Kaffeesatz';
+}
+
+.container {
+  border-bottom: 5px silver solid;
+  margin-bottom: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-details {
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
